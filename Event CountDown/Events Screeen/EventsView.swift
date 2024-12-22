@@ -15,7 +15,7 @@ struct EventsView: View {
             List(events.sorted(by: { event1, event2 in
                 event1.evnetDate < event2.evnetDate
             }), id: \.id) { event in
-                Text("\(event.eventTitle)")
+                EventRow(event: event)
             }
         }
     }

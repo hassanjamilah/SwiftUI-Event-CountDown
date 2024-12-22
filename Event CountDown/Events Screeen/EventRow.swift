@@ -7,22 +7,36 @@
 
 import SwiftUI
 
-struct Event_Row: View {
+struct EventRow: View {
     @State var event: EventModel
+    @State var formatedDiff: String = ""
     
-    var formatedDate: String {
-        let dataFormatter = DateFormatter()
-        dataFormatter.dateFormat = ""
-        return ""
-    }
+    
+        
     var body: some View {
         VStack {
-            
+            Text("\(event.eventTitle)")
+                .foregroundStyle(event.eventTextColor)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .fontWeight(.bold)
+                .font(.title)
+            Text("\(formatedDiff)")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.title2)
+        }
+        .padding()
+        .onAppear {
+            formatedDiff = event.evnetDate.getDateDiff()
+            Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
+                formatedDiff = event.evnetDate.getDateDiff()
+            }
         }
         
+        
     }
+    
 }
 
 #Preview {
-    Event_Row(event: DataHandler.SAMPLE_DATA.first!)
+    EventRow(event: DataHandler.SAMPLE_DATA.first!)
 }
