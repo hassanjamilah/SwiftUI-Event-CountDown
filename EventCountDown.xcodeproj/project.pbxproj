@@ -16,6 +16,13 @@
 		3F3213902D0D993F000CD499 /* Event_CountDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32138F2D0D993F000CD499 /* Event_CountDownTests.swift */; };
 		3F3213962D0D9A1C000CD499 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3213872D0D97F4000CD499 /* DataHandler.swift */; };
 		3F3213972D0D9A20000CD499 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3213852D0D95CA000CD499 /* EventModel.swift */; };
+		3FCC97A12D17A2A9003B4656 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97A02D17A2A9003B4656 /* EventsView.swift */; };
+		3FCC97A22D17A2A9003B4656 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97A02D17A2A9003B4656 /* EventsView.swift */; };
+		3FCC97A52D17A52F003B4656 /* Event Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97A42D17A52F003B4656 /* Event Row.swift */; };
+		3FCC97A62D17A52F003B4656 /* Event Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97A42D17A52F003B4656 /* Event Row.swift */; };
+		3FCC97AC2D17A8DB003B4656 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97AB2D17A8DB003B4656 /* Date+Ex.swift */; };
+		3FCC97AD2D17A8DB003B4656 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97AB2D17A8DB003B4656 /* Date+Ex.swift */; };
+		3FCC97AF2D17A91D003B4656 /* Date+ExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC97AE2D17A91D003B4656 /* Date+ExTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,10 @@
 		3F3213872D0D97F4000CD499 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		3F32138D2D0D993F000CD499 /* EventCountDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventCountDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F32138F2D0D993F000CD499 /* Event_CountDownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_CountDownTests.swift; sourceTree = "<group>"; };
+		3FCC97A02D17A2A9003B4656 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		3FCC97A42D17A52F003B4656 /* Event Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Row.swift"; sourceTree = "<group>"; };
+		3FCC97AB2D17A8DB003B4656 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		3FCC97AE2D17A91D003B4656 /* Date+ExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +72,7 @@
 		3F32136B2D0D929E000CD499 = {
 			isa = PBXGroup;
 			children = (
+				3FCC97AE2D17A91D003B4656 /* Date+ExTests.swift */,
 				3F3213762D0D929E000CD499 /* Event CountDown */,
 				3F32138E2D0D993F000CD499 /* Event CountDownTests */,
 				3F3213752D0D929E000CD499 /* Products */,
@@ -79,6 +91,8 @@
 		3F3213762D0D929E000CD499 /* Event CountDown */ = {
 			isa = PBXGroup;
 			children = (
+				3FCC97A72D17A8BD003B4656 /* Utilities */,
+				3FCC97A32D17A518003B4656 /* Events Screeen */,
 				3F3213772D0D929E000CD499 /* Event_CountDownApp.swift */,
 				3F3213792D0D929E000CD499 /* ContentView.swift */,
 				3F32137B2D0D92A1000CD499 /* Assets.xcassets */,
@@ -103,6 +117,23 @@
 				3F32138F2D0D993F000CD499 /* Event_CountDownTests.swift */,
 			);
 			path = "Event CountDownTests";
+			sourceTree = "<group>";
+		};
+		3FCC97A32D17A518003B4656 /* Events Screeen */ = {
+			isa = PBXGroup;
+			children = (
+				3FCC97A02D17A2A9003B4656 /* EventsView.swift */,
+				3FCC97A42D17A52F003B4656 /* Event Row.swift */,
+			);
+			path = "Events Screeen";
+			sourceTree = "<group>";
+		};
+		3FCC97A72D17A8BD003B4656 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3FCC97AB2D17A8DB003B4656 /* Date+Ex.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCC97A52D17A52F003B4656 /* Event Row.swift in Sources */,
 				3F3213882D0D97F4000CD499 /* DataHandler.swift in Sources */,
+				3FCC97A12D17A2A9003B4656 /* EventsView.swift in Sources */,
 				3F32137A2D0D929E000CD499 /* ContentView.swift in Sources */,
+				3FCC97AC2D17A8DB003B4656 /* Date+Ex.swift in Sources */,
 				3F3213862D0D95CA000CD499 /* EventModel.swift in Sources */,
 				3F3213782D0D929E000CD499 /* Event_CountDownApp.swift in Sources */,
 			);
@@ -216,9 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCC97AF2D17A91D003B4656 /* Date+ExTests.swift in Sources */,
+				3FCC97AD2D17A8DB003B4656 /* Date+Ex.swift in Sources */,
 				3F3213962D0D9A1C000CD499 /* DataHandler.swift in Sources */,
 				3F3213972D0D9A20000CD499 /* EventModel.swift in Sources */,
 				3F3213902D0D993F000CD499 /* Event_CountDownTests.swift in Sources */,
+				3FCC97A62D17A52F003B4656 /* Event Row.swift in Sources */,
+				3FCC97A22D17A2A9003B4656 /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
