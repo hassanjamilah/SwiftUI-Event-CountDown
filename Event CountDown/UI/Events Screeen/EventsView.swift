@@ -21,6 +21,15 @@ struct EventsView: View {
                 NavigationLink(value: event) {
                     EventRow(event: event)
                 }
+                .swipeActions(content: {
+                    Button {
+                        events.removeAll(where: { $0.id == event.id })
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                    .tint(.red)
+
+                })
             }
             .navigationDestination(for: EventModel.self) { event in
                 EventForm(editMode: .edit(event), onSave: { event in

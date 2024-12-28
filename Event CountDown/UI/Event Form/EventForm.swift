@@ -13,11 +13,11 @@ enum EditMode: Equatable {
 }
 
 struct EventForm: View {
+    @Environment(\.dismiss) var dismiss
     @State var event: EventModel = EventModel()
     @State var selectedColor: Color = .black
     var editMode: EditMode
     var onSave: (EventModel) -> Void
-    @State var isSaveButtonDisabled: Bool = false
     
     var body: some View {
         Form {
@@ -32,11 +32,10 @@ struct EventForm: View {
             Button(action: {
                 event.eventTextColor = selectedColor
                onSave(event)
-                isSaveButtonDisabled = true
+                dismiss()
             }, label: {
                 Image(systemName: "checkmark")
-            })
-            .disabled(isSaveButtonDisabled)
+            })            
             
         }
         .onAppear {
