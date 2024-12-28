@@ -16,8 +16,8 @@ struct EventRow: View {
     var body: some View {
         
         VStack {
-            Text("\(event.eventTitle)")
-                .foregroundStyle(event.eventTextColor)
+            Text("\(event.title)")
+                .foregroundStyle(event.textColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .fontWeight(.bold)
                 .font(.title)
@@ -28,9 +28,9 @@ struct EventRow: View {
         
         .padding()
         .onAppear {
-            formatedDiff = event.evnetDate.getDateDiff()
+            formatedDiff = event.date.getDateDiff()
             Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
-                formatedDiff = event.evnetDate.getDateDiff()
+                formatedDiff = event.date.getDateDiff()
             }
         }
         

@@ -14,7 +14,7 @@ class EventModel: Comparable, Identifiable, Hashable {
     }
     
     static func < (lhs: EventModel, rhs: EventModel) -> Bool {
-        lhs.evnetDate < rhs.evnetDate
+        lhs.date < rhs.date
     }
     
     
@@ -25,20 +25,20 @@ class EventModel: Comparable, Identifiable, Hashable {
     }
         
     var id = UUID()
-    var eventTitle: String
-    var evnetDate: Date
-    var eventTextColor: Color
+    var title: String
+    var date: Date
+    var textColor: Color
     
     init(id: UUID = UUID(), eventTitle: String, evnetDate: Date, eventTextColor: Color) {
         self.id = id
-        self.eventTitle = eventTitle
-        self.evnetDate = evnetDate
-        self.eventTextColor = eventTextColor
+        self.title = eventTitle
+        self.date = evnetDate
+        self.textColor = eventTextColor
     }
     
     init() {
-        self.eventTitle = ""
-        self.evnetDate = Date()
-        self.eventTextColor = .black
+        self.title = ""
+        self.date = Date()
+        self.textColor = .black
     }
 }

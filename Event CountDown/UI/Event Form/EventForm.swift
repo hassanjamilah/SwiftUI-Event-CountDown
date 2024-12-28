@@ -21,16 +21,16 @@ struct EventForm: View {
     
     var body: some View {
         Form {
-            TextField("Event Title", text: $event.eventTitle)
+            TextField("Event Title", text: $event.title)
                 .foregroundStyle(selectedColor)
-            DatePicker("Event Date", selection: $event.evnetDate)
+            DatePicker("Event Date", selection: $event.date)
             ColorPicker("Event Color", selection: $selectedColor)
         }
-        .navigationTitle(editMode == .addNew ? "Add Event" : "Edit \(event.eventTitle)")
+        .navigationTitle(editMode == .addNew ? "Add Event" : "Edit \(event.title)")
        
         .toolbar {
             Button(action: {
-                event.eventTextColor = selectedColor
+                event.textColor = selectedColor
                onSave(event)
                 dismiss()
             }, label: {
@@ -44,7 +44,7 @@ struct EventForm: View {
                 event = EventModel()
             case .edit(let eventModel):
                 event = eventModel
-                selectedColor = eventModel.eventTextColor
+                selectedColor = eventModel.textColor
             }
         }
     }

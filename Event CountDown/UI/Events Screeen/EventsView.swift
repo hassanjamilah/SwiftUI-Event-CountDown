@@ -16,7 +16,7 @@ struct EventsView: View {
     var body: some View {
         NavigationStack {
             List(events.sorted(by: { event1, event2 in
-                event1.evnetDate < event2.evnetDate
+                event1.date < event2.date
             }), id: \.id) { event in
                 NavigationLink(value: event) {
                     EventRow(event: event)
