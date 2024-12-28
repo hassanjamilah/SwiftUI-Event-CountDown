@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum EditMode {
+enum EditMode: Equatable {
     case addNew
     case edit(EventModel)
 }
@@ -26,6 +26,7 @@ struct EventForm: View {
             DatePicker("Event Date", selection: $event.evnetDate)
             ColorPicker("Event Color", selection: $selectedColor)
         }
+        .navigationTitle(editMode == .addNew ? "Add Event" : "Edit \(event.eventTitle)")
        
         .toolbar {
             Button(action: {
