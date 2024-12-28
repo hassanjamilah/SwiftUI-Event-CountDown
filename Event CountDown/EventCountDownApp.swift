@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Event_CountDownApp: App {
+struct EventCountDownApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

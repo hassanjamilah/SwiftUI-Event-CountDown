@@ -14,6 +14,7 @@ struct EventRow: View {
     
         
     var body: some View {
+        
         VStack {
             Text("\(event.eventTitle)")
                 .foregroundStyle(event.eventTextColor)
@@ -24,6 +25,7 @@ struct EventRow: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title2)
         }
+        
         .padding()
         .onAppear {
             formatedDiff = event.evnetDate.getDateDiff()

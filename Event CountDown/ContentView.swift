@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        EventsView(events: DataHandler.SAMPLE_DATA)
+        EventsView()
     }
 }
 
 #Preview {
+    
     ContentView()
 }
