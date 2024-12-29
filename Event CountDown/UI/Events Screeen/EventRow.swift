@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct EventRow: View {
-    @State var event: EventModel
+    let event: EventModel
+    @State var dateState: Date = Date()
     @State var formatedDiff: String = ""
     
-    
-        
     var body: some View {
         
         VStack {
@@ -26,11 +25,13 @@ struct EventRow: View {
                 .font(.title2)
         }
         
+        
         .padding()
         .onAppear {
-            formatedDiff = event.date.getDateDiff()
+            dateState = event.date
+            formatedDiff = dateState.getDateDiff()
             Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
-                formatedDiff = event.date.getDateDiff()
+                formatedDiff = dateState.getDateDiff()
             }
         }
         

@@ -8,20 +8,9 @@
 import Foundation
 import SwiftUI
 
-class EventModel: Comparable, Identifiable, Hashable {
-    static func == (lhs: EventModel, rhs: EventModel) -> Bool {
-        lhs.id == rhs.id
-    }
-    
+struct EventModel: Comparable, Identifiable, Hashable {
     static func < (lhs: EventModel, rhs: EventModel) -> Bool {
         lhs.date < rhs.date
-    }
-    
-    
-    
-    // Conform to Hashable
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
     }
         
     var id = UUID()
