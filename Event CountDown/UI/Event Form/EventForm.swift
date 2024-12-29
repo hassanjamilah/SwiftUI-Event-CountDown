@@ -16,6 +16,7 @@ struct EventForm: View {
     @Environment(\.dismiss) var dismiss
     @State var event: EventModel = EventModel()
     @State var selectedColor: Color = .black
+    @State var title: String = ""
     var editMode: EditMode
     var onSave: (EventModel) -> Void
     
@@ -26,7 +27,7 @@ struct EventForm: View {
             DatePicker("Event Date", selection: $event.date)
             ColorPicker("Event Color", selection: $selectedColor)
         }
-        .navigationTitle(editMode == .addNew ? "Add Event" : "Edit \(event.title)")
+        .navigationTitle(editMode == .addNew ? "Add Event" : "Edit \(title)")
        
         .toolbar {
             Button(action: {
@@ -45,6 +46,7 @@ struct EventForm: View {
             case .edit(let eventModel):
                 event = eventModel
                 selectedColor = eventModel.textColor
+                title = event.title
             }
         }
     }
